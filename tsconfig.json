@@ -1,1 +1,1 @@
-{"compilerOptions":{"paths":{"*":["../../*","../../../www/node_modules/*"]}},"extends":"../../tsconfig.base.json","include":["./**/*.ts","./**/*.tsx"]}
+{"compilerOptions":{"paths":{"*":["../../*","../../../npmdeps/node_modules/*"]}},"extends":"../../tsconfig.base.json","include":["./**/*.ts","./**/*.tsx", "../pxprpcBinding/JseHelper__JseIo.ts", "partic2/pxprpcBinding/rpcregistry.ts"]}
