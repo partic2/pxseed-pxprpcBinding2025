@@ -1,7 +1,7 @@
 import {RpcExtendClient1,RpcExtendClientCallable,RpcExtendClientObject} from 'pxprpc/extend'
 
 import { getRpcFunctionOn } from 'partic2/pxprpcClient/registry';
-import { getRpc4XplatjJavaServer } from 'partic2/pxprpcBinding/rpcregistry';
+import { getRpc4RuntimeBridgeJava0 } from 'partic2/pxprpcBinding/rpcregistry';
 export class Invoker{
  RemoteName='AndroidHelper.Intent';
  rpc__client?:RpcExtendClient1;
@@ -83,6 +83,10 @@ export class Invoker{
   let __v2=await __v1!.call(uri) as any;
   return __v2;
  }
+ async openHttpUrl(url:string,flag:string):Promise<void>{
+  let __v1=await this.ensureFunc('openHttpUrl','ss->');
+  let __v2=await __v1!.call(url) as any;
+ }
  async close():Promise<void>{
   let __v1=await this.ensureFunc('close','->');
   let __v2=await __v1!.call();
@@ -94,6 +98,6 @@ export let defaultInvoker:Invoker|null=null
 export async function ensureDefaultInvoker(){
     if(defaultInvoker==null){
         defaultInvoker=new Invoker();
-        defaultInvoker.useClient(await getRpc4XplatjJavaServer());
+        defaultInvoker.useClient(await getRpc4RuntimeBridgeJava0());
     }
 }

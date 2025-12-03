@@ -1,7 +1,7 @@
 import {RpcExtendClient1,RpcExtendClientCallable,RpcExtendClientObject} from 'pxprpc/extend'
 
 import { getRpcFunctionOn } from 'partic2/pxprpcClient/registry';
-import { getRpc4XplatjJavaServer } from 'partic2/pxprpcBinding/rpcregistry';
+import { getRpc4RuntimeBridgeJava0 } from 'partic2/pxprpcBinding/rpcregistry';
 export class Invoker{
  RemoteName='AndroidHelper.Camera2';
  rpc__client?:RpcExtendClient1;
@@ -109,6 +109,6 @@ export let defaultInvoker:Invoker|null=null
 export async function ensureDefaultInvoker(){
     if(defaultInvoker==null){
         defaultInvoker=new Invoker();
-        defaultInvoker.useClient(await getRpc4XplatjJavaServer());
+        defaultInvoker.useClient(await getRpc4RuntimeBridgeJava0());
     }
 }
