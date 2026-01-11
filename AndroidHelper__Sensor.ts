@@ -1,6 +1,6 @@
 import {RpcExtendClient1,RpcExtendClientCallable,RpcExtendClientObject} from 'pxprpc/extend'
 
-import { getRpcFunctionOn } from 'partic2/pxprpcClient/registry';
+import { getRpcFunctionOn } from 'partic2/pxprpcBinding/utils';
 import { getRpc4RuntimeBridgeJava0 } from 'partic2/pxprpcBinding/rpcregistry';
 export class Invoker{
  RemoteName='AndroidHelper.Sensor';

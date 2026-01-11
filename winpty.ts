@@ -1,5 +1,5 @@
 import { RpcExtendClient1, RpcExtendClientCallable, RpcExtendClientObject } from 'pxprpc/extend'
-import { getRpcFunctionOn } from 'partic2/pxprpcClient/registry';
+import { getRpcFunctionOn } from 'partic2/pxprpcBinding/utils';
 export class Invoker {
     rpc__client?: RpcExtendClient1;
     rpc__RemoteFuncs = {} as { [k: string]: RpcExtendClientCallable | undefined | null };

@@ -1,7 +1,7 @@
 import { RpcExtendClient1, RpcExtendClientCallable, RpcExtendClientObject, TableSerializer } from 'pxprpc/extend'
-import { addClient, getPersistentRegistered, getRpcFunctionOn, ServerHostWorker1RpcName } from 'partic2/pxprpcClient/registry';
 import { getRpc4RuntimeBridge0 } from 'partic2/pxprpcBinding/rpcregistry';
 import { Serializer } from 'pxprpc/base';
+import { getRpcFunctionOn } from 'partic2/pxprpcBinding/utils';
 
 export class Invoker {
     rpc__client?: RpcExtendClient1;
