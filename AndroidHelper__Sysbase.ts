@@ -31,6 +31,16 @@ export class Invoker{
   let __v1=await this.ensureFunc('unregisterBroadcastReceiver','o->');
   let __v2=await __v1!.call(receiver);
  }
+ async registerPxprpcBroadcastReceiver(filter:string):Promise<RpcExtendClientCallable>{
+    let __v1=await this.ensureFunc('registerPxprpcBroadcastReceiver','s->o');
+    let __v2=await __v1!.call(filter) as RpcExtendClientObject;
+    return (await __v2.asCallable()).typedecl('->b');
+ }
+ async registerServicePxprpcBroadcastReceiver(filter:string):Promise<RpcExtendClientCallable>{
+    let __v1=await this.ensureFunc('registerServicePxprpcBroadcastReceiver','s->o');
+    let __v2=await __v1!.call(filter) as RpcExtendClientObject;
+    return (await __v2.asCallable()).typedecl('->b');
+ }
  async getService(name:string):Promise<RpcExtendClientObject>{
   let __v1=await this.ensureFunc('getService','s->o');
   let __v2=await __v1!.call(name) as any;
