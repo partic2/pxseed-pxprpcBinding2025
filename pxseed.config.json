@@ -1,1 +1,37 @@
-{"name":"partic2/pxprpcBinding2025","loaders":[{"name":"copyFiles","include":["assets/**/*"]},{"name":"typescript"}],"extra":{"partic2/packageManager/registry":{"webui":{"entry":"partic2/pxprpcBinding2025/index","label":"partic2/pxprpcBinding2025"},"dependencies":[],"repositories":{"partic2":["https://gitee.com/partic/pxseed-${subname}.git","https://github.com/partic2/pxseed-${subname}.git"]}}}}
+{
+    "name": "partic2/pxprpcBinding2025",
+    "loaders": [
+        {
+            "name": "copyFiles",
+            "include": [
+                "assets/**/*"
+            ]
+        },
+        {
+            "name": "typescript"
+        }
+    ],
+    "clean":{
+        "include": [
+            "**/*.js"
+        ],
+        "excludeRegexp": [
+            "^data/"
+        ]
+    },
+    "extra": {
+        "partic2/packageManager/registry": {
+            "webui": {
+                "entry": "partic2/pxprpcBinding2025/index",
+                "label": "partic2/pxprpcBinding2025"
+            },
+            "dependencies": [],
+            "repositories": {
+                "partic2": [
+                    "https://gitee.com/partic/pxseed-${subname}.git",
+                    "https://github.com/partic2/pxseed-${subname}.git"
+                ]
+            }
+        }
+    }
+}
