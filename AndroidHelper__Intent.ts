@@ -85,7 +85,11 @@ export class Invoker{
  }
  async openHttpUrl(url:string,flag:string):Promise<void>{
   let __v1=await this.ensureFunc('openHttpUrl','ss->');
-  let __v2=await __v1!.call(url) as any;
+  let __v2=await __v1!.call(url,flag) as any;
+ }
+ async openStorageManagePermissionSetting():Promise<void>{
+    let __v1=await this.ensureFunc('openStorageManagePermissionSetting','->');
+    let __v2=await __v1!.call() as any
  }
  async close():Promise<void>{
   let __v1=await this.ensureFunc('close','->');

@@ -80,6 +80,10 @@ export class Invoker{
   let __v2=await __v1!.call(b) as any;
   return __v2;
  }
+ async copyAssets(sourceDir:string,destinationDir:string):Promise<void>{
+   let __v1=await this.ensureFunc('copyAssets','ss->s');
+   let __v2=await __v1!.call();
+ }
  async close():Promise<void>{
   let __v1=await this.ensureFunc('close','->');
   let __v2=await __v1!.call();
